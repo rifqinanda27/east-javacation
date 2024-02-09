@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>East Javacation</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/htmx.org@1.9.10"></script>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.1/flowbite.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/assets/css/style.css" />
+  </head>
+  <body
+    class="poppins-regular bg-white text-[#1a1625] dark:bg-[#1a1625] dark:text-white"
+  >
+    <header class="container max-w-screen-xl mx-auto">
+      <nav id="nav" class="w-full z-10">
+        <div
+          class="max-w-screen-xl flex flex-wrap items-center justify-between p-4 absolute w-full px-4 md:px-12"
+          id="navChild"
+        >
+          <a
+            href="/"
+            class="flex items-center space-x-3 rtl:space-x-reverse z-10"
+          >
+            <span
+              class="self-center text-lg md:text-2xl font-semibold whitespace-nowrap"
+              >East Javacation</span
+            >
+          </a>
+          <button
+            data-collapse-toggle="navbar-dropdown"
+            type="button"
+            class="inline-flex items-center p-2 w-10 h-10 justify-center rounded-lg md:hidden z-10"
+            aria-controls="navbar-dropdown"
+            aria-expanded="false"
+          >
+            <svg
+              class="w-5 h-5"
+              aria-hidden="true"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 17 14"
+            >
+              <path
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M1 1h15M1 7h15M1 13h15"
+              />
+            </svg>
+          </button>
+          <div
+            class="hidden w-full md:block md:w-auto z-10"
+            id="navbar-dropdown"
+          >
+            <ul
+              class="bg-[#1a1625] md:bg-transparent right-0 flex flex-col font-medium p-4 md:p-0 mt-4 border md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 rounded-md"
+            >
+              <li>
+                <a href="/" hx-boost="false" class="block py-2 px-3 md:p-0"
+                  >Home</a
+                >
+              </li>
+              <!-- Start Destination -->
+              <li>
+                <button
+                  id="dropdownNavbarLink"
+                  data-dropdown-toggle="dropdownDestinations"
+                  class="flex items-center justify-between w-full py-2 px-3 rounded md:border-0 md:p-0 md:w-auto"
+                >
+                  Destinations
+                  <svg
+                    class="w-2.5 h-2.5 ms-2.5"
+                    aria-hidden="true"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 10 6"
+                  >
+                    <path
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="m1 1 4 4 4-4"
+                    />
+                  </svg>
+                </button>
+
+                <!-- Dropdown menu -->
+                <div
+                  id="dropdownDestinations"
+                  class="z-10 hidden font-normal bg-[#2f2b3a] border divide-y divide-gray-100 rounded-lg shadow w-44"
+                >
+                  <ul
+                    class="py-2 text-gray-700"
+                    aria-labelledby="dropdownLargeButton"
+                  >
+                    <li>
+                      <a
+                        hx-boost="true"
+                        href="/places/"
+                        class="block px-4 py-2 text-white hover:bg-[#2f2b3a]/[.5]"
+                        >Destinations</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        hx-boost="true"
+                        href="#"
+                        class="block px-4 py-2 text-white hover:bg-[#2f2b3a]/[.5]"
+                        >Attraction</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        hx-boost="true"
+                        href="#"
+                        class="block px-4 py-2 text-white hover:bg-[#2f2b3a]/[.5]"
+                        >Local Ativities</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <!-- End Destination -->
+
+              <!-- Start Travel Plan -->
+              <li>
+                <button
+                  data-dropdown-toggle="dropdownTravelPlan"
+                  class="flex items-center justify-between w-full py-2 px-3 rounded md:border-0 md:p-0 md:w-auto"
+                >
+                  Travel Plan
+                  <svg
+                    class="w-2.5 h-2.5 ms-2.5"
+                    aria-hidden="true"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 10 6"
+                  >
+                    <path
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="m1 1 4 4 4-4"
+                    />
+                  </svg>
+                </button>
+
+                <!-- Dropdown menu -->
+                <div
+                  id="dropdownTravelPlan"
+                  class="z-10 hidden font-normal bg-[#2f2b3a] border divide-y divide-gray-100 rounded-lg shadow w-44"
+                >
+                  <ul
+                    class="py-2 text-gray-700"
+                    aria-labelledby="dropdownLargeButton"
+                  >
+                    <li>
+                      <a
+                        hx-boost="true"
+                        href="#"
+                        class="block px-4 py-2 text-white hover:bg-[#2f2b3a]/[.5]"
+                        >General Information</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        hx-boost="true"
+                        href="#"
+                        class="block px-4 py-2 text-white hover:bg-[#2f2b3a]/[.5]"
+                        >Tour Packages</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        hx-boost="true"
+                        href="#"
+                        class="block px-4 py-2 text-white hover:bg-[#2f2b3a]/[.5]"
+                        >Accomodation</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <!-- End Travel Plan -->
+
+              <!-- Start Resources -->
+              <li>
+                <button
+                  data-dropdown-toggle="dropdownResources"
+                  class="flex items-center justify-between w-full py-2 px-3 rounded md:border-0 md:p-0 md:w-auto"
+                >
+                  Resources
+                  <svg
+                    class="w-2.5 h-2.5 ms-2.5"
+                    aria-hidden="true"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 10 6"
+                  >
+                    <path
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="m1 1 4 4 4-4"
+                    />
+                  </svg>
+                </button>
+
+                <!-- Dropdown menu -->
+                <div
+                  id="dropdownResources"
+                  class="z-10 hidden font-normal bg-[#2f2b3a] border divide-y divide-gray-100 rounded-lg shadow w-44"
+                >
+                  <ul
+                    class="py-2 text-gray-700"
+                    aria-labelledby="dropdownLargeButton"
+                  >
+                    <li>
+                      <a
+                        hx-boost="true"
+                        href="#"
+                        class="block px-4 py-2 text-white hover:bg-[#2f2b3a]/[.5]"
+                        >Gallery</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        hx-boost="true"
+                        href="#"
+                        class="block px-4 py-2 text-white hover:bg-[#2f2b3a]/[.5]"
+                        >Articles</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        hx-boost="true"
+                        href="#"
+                        class="block px-4 py-2 text-white hover:bg-[#2f2b3a]/[.5]"
+                        >About Us</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <!-- End Resources -->
+
+              <!-- Start Mode Button -->
+              <li>
+                <button>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                    class="bi bi-brightness-high"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      d="M8 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6m0 1a4 4 0 1 0 0-8 4 4 0 0 0 0 8M8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0m0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13m8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5M3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8m10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0m-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0m9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707M4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708"
+                    />
+                  </svg>
+                </button>
+              </li>
+              <!-- End Mode Button -->
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <div>
+        <div class="bg-background bg-cover bg-center aspect-widescreen">
+          <video
+            autoplay
+            loop
+            muted
+            id="video"
+            class="object-cover w-full h-full"
+          >
+            <source
+              src="https://ik.imagekit.io/rnatrnn6r/0208(2).mp4?updatedAt=1707351595776"
+              type="video/mp4"
+            />
+          </video>
+        </div>
+
+        <div
+          class="max-w-screen-xl w-full absolute items-center top-[20%] md:top-52 lg:top-60"
+        >
+          <div class="text-white mx-auto text-center">
+            <h3
+              class="inline md:block tracking-widest text-lg md:text-3xl lg:text-4xl"
+            >
+              Adventure in
+            </h3>
+            <h2
+              class="inline md:block text-lg font-extrabold md:text-5xl lg:text-6xl"
+            >
+              East Java
+            </h2>
+            <h3 class="text-sm tracking-wider font-extrabold md:text-2xl">
+              Discover Nature's Beauty and Cultural Wonders!
+            </h3>
+            <div class="flex gap-4 mx-auto justify-center my-4">
+              <button
+                onclick="goToHowToStart()"
+                class="font-semibold w-[150px] p-2 bg-gradient-to-r from-[#43cea2] to-[#185a9d] rounded"
+              >
+                How To Start
+              </button>
+              <div
+                class="w-[150px] p-2 bg-gradient-to-r from-[#185a9d] to-[#43cea2] rounded"
+              >
+                <a href="#howToStart" class="font-semibold">Find Destination</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <section class="container max-w-screen-xl mx-auto my-8 px-4 md:px-12">
+      <h2 class="text-2xl md:text-4xl font-bold my-4">Popular Destination</h2>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
+        <div>
+          <img
+            src="/assets/img/bromo.jpg"
+            alt=""
+            class="w-full h-full rounded"
+          />
+        </div>
+        <div>
+          <img
+            src="/assets/img/kawah-ijen.jpg"
+            alt=""
+            class="w-full h-full rounded"
+          />
+        </div>
+        <div>
+          <img
+            src="/assets/img/de-djawatan.jpg"
+            alt=""
+            class="w-full h-full rounded"
+          />
+        </div>
+        <div>
+          <img
+            src="/assets/img/kawah-bondowoso.jpg"
+            alt=""
+            class="w-full h-full rounded"
+          />
+        </div>
+        <div>
+          <img
+            src="/assets/img/pantai-papuma.jpg"
+            alt=""
+            class="w-full h-full rounded"
+          />
+        </div>
+        <div>
+          <img
+            src="/assets/img/wedi-klopo-beach.jpg"
+            alt=""
+            class="w-full h-full rounded"
+          />
+        </div>
+        <div>
+          <img
+            src="/assets/img/gunung-kelud.jpg"
+            alt=""
+            class="w-full h-full rounded"
+          />
+        </div>
+        <div>
+          <img
+            src="/assets/img/madakaripura-waterfall.jpg"
+            alt=""
+            class="w-full h-full rounded"
+          />
+        </div>
+      </div>
+    </section>
+
+    <script src="/assets/js/app.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.1/flowbite.min.js"></script>
+  </body>
+</html>
