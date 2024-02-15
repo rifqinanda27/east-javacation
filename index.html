@@ -19,7 +19,7 @@
   <header class="container max-w-full mx-auto">
     <nav id="nav" class="w-full z-10">
       <div
-        class="max-w-full flex flex-wrap items-center justify-between p-4 absolute w-full px-4 md:px-12 text-white dark:bg-transparent"
+        class="max-w-full mx-auto flex flex-wrap items-center justify-between p-4 absolute w-full px-4 md:px-12 text-white dark:bg-transparent"
         id="navChild">
         <a href="/" class="flex items-center space-x-3 rtl:space-x-reverse z-10">
           <span class="self-center text-lg md:text-2xl font-semibold whitespace-nowrap">East Javacation</span>
@@ -158,7 +158,7 @@
       </div>
     </nav>
     <div>
-      <div class="max-w-full w-full absolute items-center top-[10%] md:top-[20%] lg:top-80">
+      <div class="max-w-full w-full absolute items-center top-[10%] md:top-[20%] lg:top-[50%]">
         <div class="text-white mx-auto text-center">
           <h3 class="inline md:block tracking-widest text-lg md:text-3xl lg:text-4xl">
             Adventure in
@@ -169,7 +169,7 @@
           <h3 class="text-sm tracking-wider font-extrabold md:text-2xl">
             Discover Nature's Beauty and Cultural Wonders!
           </h3>
-          <div class="flex gap-4 mx-auto justify-center my-4">
+          <div class="flex gap-4 mx-auto justify-center my-4 text-sm">
             <button onclick="goToHowToStart()"
               class="font-semibold w-[150px] p-2 bg-gradient-to-r from-primary to-secondary rounded">
               How To Start
@@ -191,7 +191,7 @@
 
   <section class="container max-w-screen-xl mx-auto my-8 px-4 md:px-12" id="how-to-start">
     <div>
-      <h1 class="text-2xl md:text-4xl font-bold my-12">Travel Tips</h1>
+      <h1 class="text-2xl md:text-4xl font-bold my-4 md:my-12">Travel Tips</h1>
     </div>
     <ul class=" grid md:grid-cols-3 w-fulll gap-4 md:gap-6">
       <li class="bg-white border border-gray-200 shadow dark:bg-mixed200 p-4 rounded">
@@ -204,7 +204,7 @@
           Search for your preferred destination for adventure and enjoying the
           beauty of nature.
         </p>
-        <div class="w-1/3 bg-gradient-to-r from-secondary to-primary p-2 rounded">
+        <div class="md:w-1/3 bg-gradient-to-r from-secondary to-primary p-2 rounded">
           <a href="#" class="block text-center font-semibold text-white">Learn More</a>
         </div>
       </li>
@@ -218,7 +218,7 @@
           Learn about the rich culture and profound ideology of unity in
           diversity that thrives in the vibrant tapestry of East Java.
         </p>
-        <div class="w-1/3 bg-gradient-to-r from-secondary to-primary p-2 rounded">
+        <div class="md:w-1/3 bg-gradient-to-r from-secondary to-primary p-2 rounded">
           <a href="#" class="block text-center font-semibold text-white">Learn More</a>
         </div>
       </li>
@@ -232,7 +232,7 @@
           Choose your tour package, the package includes plane tickets ,
           hotels, restaurants, etc. and enjoy your vacation.
         </p>
-        <div class="w-1/3 bg-gradient-to-r from-secondary to-primary p-2 rounded">
+        <div class="md:w-1/3 bg-gradient-to-r from-secondary to-primary p-2 rounded">
           <a href="#" class="block text-center font-semibold text-white">Learn More</a>
         </div>
       </li>
@@ -241,61 +241,61 @@
 
   <section class="container max-w-screen-xl mx-auto my-8 px-4 md:px-12">
     <h2 class="text-2xl md:text-4xl font-bold my-12">Popular Destination</h2>
-    <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
+    <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 text-center md:text-left">
       <div class="relative overflow-hidden rounded">
         <img src="/assets/img/bromo.jpg" alt=""
           class="w-full h-full hover:scale-125 transition duration-300 cursor-pointer" />
         <div class="absolute bottom-0 p-4 bg-gradient-to-t from-mixed100 w-full">
-          <h3 class="font-semibold text-white">Mount Bromo</h3>
+          <h3 class="text-sm md:text-md font-semibold text-white">Mount Bromo</h3>
         </div>
       </div>
       <div class="relative overflow-hidden rounded">
         <img src="/assets/img/kawah-ijen.jpg" alt=""
           class="w-full h-full rounded hover:scale-125 transition duration-300 cursor-pointer" />
         <div class="absolute bottom-0 p-4 bg-gradient-to-t from-mixed100 w-full">
-          <h3 class="font-semibold text-white">Ijen Crater</h3>
+          <h3 class="text-sm md:text-md font-semibold text-white">Ijen Crater</h3>
         </div>
       </div>
       <div class="relative overflow-hidden rounded">
         <img src="/assets/img/de-djawatan.jpg" alt=""
           class="w-full h-full rounded hover:scale-125 transition duration-300 cursor-pointer" />
         <div class="absolute bottom-0 p-4 bg-gradient-to-t from-mixed100 w-full">
-          <h3 class="font-semibold text-white">De Djawatan Forest</h3>
+          <h3 class="text-sm md:text-md font-semibold text-white">De Djawatan Forest</h3>
         </div>
       </div>
       <div class="relative overflow-hidden rounded">
         <img src="/assets/img/kawah-bondowoso.jpg" alt=""
           class="w-full h-full rounded hover:scale-125 transition duration-300 cursor-pointer" />
         <div class="absolute bottom-0 p-4 bg-gradient-to-t from-mixed100 w-full">
-          <h3 class="font-semibold text-white">Wurung Crater</h3>
+          <h3 class="text-sm md:text-md font-semibold text-white">Wurung Crater</h3>
         </div>
       </div>
       <div class="relative overflow-hidden rounded">
         <img src="/assets/img/pantai-papuma.jpg" alt=""
           class="w-full h-full rounded hover:scale-125 transition duration-300 cursor-pointer" />
         <div class="absolute bottom-0 p-4 bg-gradient-to-t from-mixed100 w-full">
-          <h3 class="font-semibold text-white">Papuma Beach</h3>
+          <h3 class="text-sm md:text-md font-semibold text-white">Papuma Beach</h3>
         </div>
       </div>
       <div class="relative overflow-hidden rounded">
         <img src="/assets/img/wedi-klopo-beach.jpg" alt=""
           class="w-full h-full rounded hover:scale-125 transition duration-300 cursor-pointer" />
         <div class="absolute bottom-0 p-4 bg-gradient-to-t from-mixed100 w-full">
-          <h3 class="font-semibold text-white">Wedi Klopo Beach</h3>
+          <h3 class="text-sm md:text-md font-semibold text-white">Wedi Klopo Beach</h3>
         </div>
       </div>
       <div class="relative overflow-hidden rounded">
         <img src="/assets/img/gunung-kelud.jpg" alt=""
           class="w-full h-full rounded hover:scale-125 transition duration-300 cursor-pointer" />
         <div class="absolute bottom-0 p-4 bg-gradient-to-t from-mixed100 w-full">
-          <h3 class="font-semibold text-white">Mount Kelud</h3>
+          <h3 class="text-sm md:text-md font-semibold text-white">Mount Kelud</h3>
         </div>
       </div>
       <div class="relative overflow-hidden rounded">
         <img src="/assets/img/madakaripura-waterfall.jpg" alt=""
           class="w-full h-full rounded hover:scale-125 transition duration-300 cursor-pointer" />
         <div class="absolute bottom-0 p-4 bg-gradient-to-t from-mixed100 w-full">
-          <h3 class="font-semibold text-white">Madakaripura Waterfall</h3>
+          <h3 class="text-sm md:text-md font-semibold text-white">Madakaripura Waterfall</h3>
         </div>
       </div>
     </div>
