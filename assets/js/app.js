@@ -75,3 +75,24 @@ themeToggleBtn.addEventListener("click", function () {
     }
   }
 });
+
+// Mendaftarkan event listener untuk peristiwa resize window
+window.addEventListener("resize", function () {
+  // Membaca lebar layar saat ini
+  var screenWidth = window.innerWidth;
+
+  // Mendapatkan elemen video
+  var video = document.getElementById("video");
+
+  // Mendapatkan sumber video yang tersedia
+  var source768 = document.querySelector('source[data-width="768"]');
+  var sourceDefault = document.querySelector("source[data-default]");
+
+  // Jika lebar layar kurang dari atau sama dengan 767px, ganti sumber video menjadi 768px
+  if (screenWidth <= 767) {
+    video.src = source768.getAttribute("src");
+  } else {
+    // Jika lebar layar lebih besar dari 767px, kembalikan ke sumber video default
+    video.src = sourceDefault.getAttribute("src");
+  }
+});
