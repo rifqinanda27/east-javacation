@@ -21,13 +21,13 @@ window.addEventListener("scroll", function () {
 });
 
 // Ketika button di klik mengarah ke konten
-function goToHowToStart() {
-  const howToStart = document.getElementById("how-to-start");
+function goToTravelTips() {
+  const travelTrips = document.getElementById("travel-tips");
   const navbarHeight = document.getElementById("navChild").offsetHeight;
   const offset = navbarHeight + 20;
 
   window.scroll({
-    top: howToStart.offsetTop - offset,
+    top: travelTrips.offsetTop - offset,
   });
 }
 
@@ -96,3 +96,42 @@ window.addEventListener("resize", function () {
     video.src = sourceDefault.getAttribute("src");
   }
 });
+
+function readMore() {
+  var dots = document.getElementById("dots");
+  var moreText = document.getElementById("more");
+  var btnText = document.getElementById("readBtn");
+
+  if (dots.style.display === "none") {
+    dots.style.display = "inline";
+    btnText.innerHTML = "Read more";
+    moreText.style.display = "none";
+    btnText.classList.remove("mt-6");
+  } else {
+    dots.style.display = "none";
+    btnText.innerHTML = "Read less";
+    moreText.style.display = "inline";
+    btnText.classList.add("mt-6");
+  }
+}
+
+function showMore() {
+  var arrowDown = document.getElementById("arrow-down");
+  var arrowUp = document.getElementById("arrow-up");
+  var travelMore = document.getElementById("travel-more");
+  var btnText = document.getElementById("show-more-btn");
+
+  if (arrowDown.style.display === "none") {
+    arrowDown.style.display = "block";
+    arrowUp.style.display = "none";
+    btnText.innerHTML = "Show more";
+    travelMore.style.display = "none";
+    btnText.classList.remove("mt-2");
+  } else {
+    arrowDown.style.display = "none";
+    arrowUp.classList.add = "block";
+    btnText.innerHTML = "Show less";
+    travelMore.style.display = "grid";
+    btnText.classList.add("mt-2");
+  }
+}
