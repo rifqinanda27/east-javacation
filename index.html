@@ -17,7 +17,7 @@
 
 <body class="poppins-regular bg-white text-mixed100 dark:bg-mixed100 dark:text-white duration-300">
   <header class="container max-w-full mx-auto">
-    <nav id="nav" class="w-full z-10">
+    <nav id="nav" class="w-full z-30">
       <div
         class="max-w-full mx-auto flex flex-wrap items-center justify-between p-4 absolute w-full px-4 md:px-12 text-white dark:bg-transparent"
         id="navChild">
@@ -35,11 +35,12 @@
         <div class="hidden w-full md:block md:w-auto z-10" id="navbar-dropdown">
           <ul
             class="bg-white text-mixed100 dark:bg-mixed100 dark:text-white md:bg-transparent dark:md:bg-transparent right-0 flex flex-col font-medium p-4 md:p-0 mt-4 border md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 rounded-md items-center">
+            
             <li>
               <a href="/" hx-boost="false" class="block py-2 px-3 md:p-0 md:text-white">Home</a>
             </li>
             <!-- Start Destination -->
-            <li>
+            <!-- <li>
               <button id="dropdownNavbarLink" data-dropdown-toggle="dropdownDestinations"
                 class="flex items-center justify-between w-full py-2 px-3 rounded md:text-white md:border-0 md:p-0 md:w-auto">
                 Destinations
@@ -50,7 +51,6 @@
                 </svg>
               </button>
 
-              <!-- Dropdown menu -->
               <div id="dropdownDestinations"
                 class="z-10 hidden font-normal bg-white text-mixed100 dark:text-white dark:bg-mixed200 border divide-y divide-gray-100 rounded-lg shadow w-44">
                 <ul class="py-2" aria-labelledby="dropdownLargeButton">
@@ -64,82 +64,31 @@
                   </li>
                   <li>
                     <a hx-boost="true" href="#"
-                      class="block px-4 py-2 hover:bg-gray-200 dark:hover:bg-mixed100/[.5]">Local Ativities</a>
+                      class="block px-4 py-2 hover:bg-gray-200 dark:hover:bg-mixed100/[.5]">Local Foods</a>
                   </li>
                 </ul>
               </div>
-            </li>
+            </li> -->
             <!-- End Destination -->
-
-            <!-- Start Travel Plan -->
+            
             <li>
-              <button data-dropdown-toggle="dropdownTravelPlan"
-                class="flex items-center justify-between w-full py-2 px-3 rounded md:text-white md:border-0 md:p-0 md:w-auto">
-                Travel Plan
-                <svg class="w-2.5 h-2.5 ms-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
-                  viewBox="0 0 10 6">
-                  <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                    d="m1 1 4 4 4-4" />
-                </svg>
-              </button>
-
-              <!-- Dropdown menu -->
-              <div id="dropdownTravelPlan"
-                class="z-10 hidden font-normal bg-white text-mixed100 dark:text-white dark:bg-mixed200 border divide-y divide-gray-100 rounded-lg shadow w-44">
-                <ul class="py-2" aria-labelledby="dropdownLargeButton">
-                  <li>
-                    <a hx-boost="true" href="#"
-                      class="block px-4 py-2 hover:bg-gray-200 dark:hover:bg-mixed100/[.5]">General Information</a>
-                  </li>
-                  <li>
-                    <a hx-boost="true" href="#"
-                      class="block px-4 py-2 hover:bg-gray-200 dark:hover:bg-mixed100/[.5]">Tour Packages</a>
-                  </li>
-                  <li>
-                    <a hx-boost="true" href="#"
-                      class="block px-4 py-2 hover:bg-gray-200 dark:hover:bg-mixed100/[.5]">Accomodation</a>
-                  </li>
-                </ul>
-              </div>
+              <a href="http://" hx-boost="true" class="block py-2 px-3 md:p-0 md:text-white">Destinations</a>
             </li>
-            <!-- End Travel Plan -->
 
-            <!-- Start Resources -->
             <li>
-              <button data-dropdown-toggle="dropdownResources"
-                class="flex items-center justify-between w-full py-2 px-3 rounded md:text-white md:border-0 md:p-0 md:w-auto">
-                Resources
-                <svg class="w-2.5 h-2.5 ms-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
-                  viewBox="0 0 10 6">
-                  <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                    d="m1 1 4 4 4-4" />
-                </svg>
-              </button>
-
-              <!-- Dropdown menu -->
-              <div id="dropdownResources"
-                class="z-10 hidden font-normal bg-white text-mixed100 dark:text-white dark:bg-mixed200 border divide-y divide-gray-100 rounded-lg shadow w-44">
-                <ul class="py-2" aria-labelledby="dropdownLargeButton">
-                  <li>
-                    <a hx-boost="true" href="#"
-                      class="block px-4 py-2 hover:bg-gray-200 dark:hover:bg-mixed100/[.5]">Gallery</a>
-                  </li>
-                  <li>
-                    <a hx-boost="true" href="#"
-                      class="block px-4 py-2 hover:bg-gray-200 dark:hover:bg-mixed100/[.5]">Articles</a>
-                  </li>
-                  <li>
-                    <a hx-boost="true" href="#"
-                      class="block px-4 py-2 hover:bg-gray-200 dark:hover:bg-mixed100/[.5]">About Us</a>
-                  </li>
-                </ul>
-              </div>
+              <a href="http://" hx-boost="true" class="block py-2 px-3 md:p-0 md:text-white">Attraction</a>
             </li>
-            <!-- End Resources -->
 
-            <!-- Start Mode Button -->
             <li>
-              <button id="theme-toggle" type="button" class="md:text-white rounded-lg text-sm p-2.5">
+              <a href="http://" hx-boost="true" class="block py-2 px-3 md:p-0 md:text-white">Local Foods</a>
+            </li>
+
+            <li>
+              <a href="http://" hx-boost="true" class="block py-2 px-3 md:p-0 md:text-white">Gallery</a>
+            </li>
+            
+            <li>
+              <button id="theme-toggle" type="button" class="md:text-white rounded-lg text-sm p-2.5 z-10">
                 <svg id="theme-toggle-dark-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20"
                   xmlns="http://www.w3.org/2000/svg">
                   <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path>
@@ -152,27 +101,36 @@
                 </svg>
               </button>
             </li>
-            <!-- End Mode Button -->
           </ul>
         </div>
+        <!-- Start Mode Button -->
+        <!-- End Mode Button -->
       </div>
     </nav>
+  </header>
+
+  <!-- Header Background -->
+  <div class="bg-background bg-cover bg-center aspect-widescreen relative">
+    <video autoplay loop muted id="video" class="object-cover w-full h-full">
+      <source src="https://ik.imagekit.io/rnatrnn6r/0208-2_gibyOJJG_3.mp4?updatedAt=1708039260407" type="video/mp4" media="(max-width: 768px)" data-width="768">
+      <source src="https://ik.imagekit.io/rnatrnn6r/0208(2).mp4?updatedAt=1707351595776" type="video/mp4" media="(min-width: 768px)" data-default/>
+    </video>
     <div>
-      <div class="max-w-full w-full absolute items-center top-[30%] md:top-[10%] lg:top-[35%]">
+      <div class="amaranth-regular font-bold max-w-full w-full absolute items-center top-[30%]">
         <div class="text-white mx-auto text-center">
           <h3 class="inline md:block tracking-widest text-lg md:text-3xl lg:text-4xl">
             Adventure in
           </h3>
-          <h2 class="inline md:block text-lg font-extrabold md:text-5xl lg:text-6xl">
+          <h2 class="inline md:block text-lg md:text-5xl lg:text-6xl">
             East Java
           </h2>
-          <h3 class="text-sm tracking-wider font-extrabold md:text-2xl">
+          <h3 class="text-sm tracking-wider md:text-2xl">
             Discover Nature's Beauty and Cultural Wonders!
           </h3>
-          <div class="flex gap-4 mx-auto justify-center my-4 text-sm">
-            <button onclick="goToHowToStart()"
+          <div class="poppins-regular flex gap-4 mx-auto justify-center my-4 text-sm">
+            <button onclick="goToTravelTips()"
               class="font-semibold w-[150px] p-2 bg-gradient-to-r from-primary to-secondary rounded">
-              How To Start
+              Travel Tips
             </button>
             <div class="w-[150px] p-2 bg-gradient-to-r from-secondary to-primary rounded">
               <a href="#howToStart" class="font-semibold">Find Destination</a>
@@ -181,68 +139,203 @@
         </div>
       </div>
     </div>
-  </header>
-
-  <div class="bg-background bg-cover bg-center aspect-widescreen">
-    <video autoplay loop muted id="video" class="object-cover w-full h-full">
-      <source src="https://ik.imagekit.io/rnatrnn6r/0208-2_gibyOJJG_3.mp4?updatedAt=1708039260407" type="video/mp4" media="(max-width: 768px)" data-width="768">
-      <source src="https://ik.imagekit.io/rnatrnn6r/0208(2).mp4?updatedAt=1707351595776" type="video/mp4" media="(min-width: 768px)" data-default/>
-    </video>
   </div>
 
-  <section class="container max-w-screen-xl mx-auto my-8 px-4 md:px-12" id="how-to-start">
+  <section class="container max-w-screen-xl mx-auto my-8 px-4 md:px-12">
+    <h2 class="amaranth-regular font-bold text-2xl md:text-4xl my-4 mt-20">A brief history of East Java</h2>
+    <div class="md:flex md:gap-6">
+      <div class="w-full">
+        <img src="/assets/img/Ggrahadi.jpg" alt="" class="rounded">
+        <!-- <img src="/assets/img/Peta_jawa_timur.png" alt="" class="rounded"> -->
+      </div>
+      <div class="w-full">
+        <p>
+          East Java, located on the eastern part of Java Island in Indonesia, has a rich and diverse history dating back centuries. The region has been inhabited since prehistoric times, with evidence of early human settlements found in various archaeological sites. <br><br>
+          One of the earliest known kingdoms in East Java was the kingdom of Kediri, which flourished from the 11th to the 13th century. It was followed by the Majapahit Empire, one of the largest and most powerful empires in Southeast Asia, which rose to prominence in the 13th century under the rule of King Hayam Wuruk. <br><br>
+          During the colonial period, East Java came under Dutch control, along with the rest of the Indonesian archipelago. The Dutch established various trading posts and administrative centers in the region, contributing to the development of trade and commerce<span id="dots">...</span><br><br>
+          <span id="more" class="hidden">
+            In the 20th century, East Java played a significant role in Indonesia's struggle for independence from Dutch colonial rule. The region was a hotbed of nationalist movements and resistance against colonial oppression. Figures like Sukarno and Hatta, who later became the first president and vice president of Indonesia, were actively involved in the independence movement in East Java. <br>
+            After gaining independence in 1945, East Java continued to grow and develop, becoming one of the most populous and economically dynamic provinces in Indonesia. Its economy is diversified, with agriculture, manufacturing, trade, and tourism playing key roles in driving growth and development. <br><br>
+            Today, East Java remains a vibrant and culturally rich region, known for its diverse traditions, arts, and cuisine. Its historical significance, coupled with its natural beauty and economic potential, makes it a vital part of Indonesia's cultural and economic landscape.
+          </span>
+        </p>
+        <button onclick="readMore()" id="readBtn" class="font-semibold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">Read more</button>
+      </div>
+    </div>
+  </section>
+
+  <section id="indicators-carousel" class="relative w-full mt-24" data-carousel="static">
+    <!-- Carousel wrapper -->
+    <div class="relative h-screen md:h-[450px] overflow-hidden text-white">
+         <!-- Item 1 -->
+        <div class="hidden duration-700 ease-in-out" data-carousel-item="active">
+          <div class="absolute top-6 left-6 md:top-16 md:left-32 z-10 md:w-1/2">
+            <h2 class="amaranth-regular font-bold text-4xl md:text-6xl text-shadow mb-6">Surabaya</h2>
+            <h3 class="amaranth-regular font-bold text-3xl md:text-5xl text-shadow">The largest city in East Java and second in Indonesia.</h3>
+            <p class="text-sm md:text-xl text-shadow">A bustling metropolitan city known for its dynamic culture. With a rich history and modern infrastructure.</p>
+            <div class="bg-gradient-to-r from-secondary to-primary p-3 rounded w-1/2 md:w-1/3 mt-6">
+              <div class="flex flex-warp items-center">
+                <a href="http://" class="block mx-auto">Explore Surabaya</a>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="block mx-auto bi bi-arrow-right" viewBox="0 0 16 16">
+                  <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"/>
+                </svg>
+              </div>
+            </div>
+          </div>
+            <img src="/assets/img/surabaya.jpeg" class="absolute object-cover block w-full h-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
+        </div>
+        <!-- Item 2 -->
+        <div class="hidden duration-700 ease-in-out" data-carousel-item>
+          <div class="absolute top-6 left-6 md:top-16 md:left-32 z-10 md:w-1/2">
+            <h2 class="amaranth-regular font-bold text-4xl md:text-6xl text-shadow mb-6">Malang</h2>
+            <h3 class="amaranth-regular font-bold text-3xl md:text-5xl text-shadow">Nature's Beauty, and Culinary Delights</h3>
+            <p class="text-sm md:text-xl text-shadow">Famous for its diverse natural beauty, delicious traditional cuisine, and sustainable culture.</p>
+            <div class="bg-gradient-to-r from-secondary to-primary p-3 rounded w-1/2 md:w-1/3 mt-6">
+              <div class="flex flex-warp items-center">
+                <a href="http://" class="block mx-auto">Explore Malang</a>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="block mx-auto bi bi-arrow-right" viewBox="0 0 16 16">
+                  <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"/>
+                </svg>
+              </div>
+            </div>
+          </div>
+            <img src="/assets/img/malang.jpg" class="absolute object-cover block w-full h-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
+        </div>
+        <!-- Item 3 -->
+        <div class="hidden duration-700 ease-in-out" data-carousel-item>
+          <div class="absolute top-6 left-6 md:top-16 md:left-32 z-10 md:w-1/2">
+            <h2 class="amaranth-regular font-bold text-4xl md:text-6xl text-shadow mb-6">Pacitan</h2>
+            <h3 class="amaranth-regular font-bold text-3xl md:text-5xl text-shadow">Warm hospitality and welcoming community.</h3>
+            <p class="text-sm md:text-xl text-shadow">Renowned for its pristine beaches, enchanting waterfalls, countryside, and rich cultural heritage.</p>
+            <div class="bg-gradient-to-r from-secondary to-primary p-3 rounded w-1/2 md:w-1/3 mt-6">
+              <div class="flex flex-warp items-center">
+                <a href="http://" class="block mx-auto">Explore Pacitan</a>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="block mx-auto bi bi-arrow-right" viewBox="0 0 16 16">
+                  <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"/>
+                </svg>
+              </div>
+            </div>
+          </div>
+            <img src="/assets/img/pacitan.jpg" class="absolute object-cover block w-full h-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
+        </div>
+        <!-- Item 4 -->
+        <div class="hidden duration-700 ease-in-out" data-carousel-item>
+            <img src="/assets/img/Kota-Probolinggo-2272021.jpg" class="absolute object-cover block w-full h-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
+        </div>
+        <!-- Item 5 -->
+        <div class="hidden duration-700 ease-in-out" data-carousel-item>
+            <img src="https://ik.imagekit.io/rnatrnn6r/bromo-header-min.jpg?updatedAt=1708143928061" class="absolute block w-full h-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
+        </div>
+    </div>
+    <!-- Slider indicators -->
+    <!-- <div class="absolute z-20 flex -translate-x-1/2 space-x-3 rtl:space-x-reverse bottom-5 left-1/2">
+        <button type="button" class="w-3 h-3 rounded-full" aria-current="true" aria-label="Slide 1" data-carousel-slide-to="0"></button>
+        <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 2" data-carousel-slide-to="1"></button>
+        <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 3" data-carousel-slide-to="2"></button>
+        <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 4" data-carousel-slide-to="3"></button>
+        <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 5" data-carousel-slide-to="4"></button>
+    </div> -->
+    <!-- Slider controls -->
+    <button type="button" class="absolute top-0 start-0 z-20 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-prev>
+        <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 group-hover:bg-white/50 group-focus:ring-4 group-focus:ring-white group-focus:outline-none">
+            <svg class="w-4 h-4 text-white rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 1 1 5l4 4"/>
+            </svg>
+            <span class="sr-only">Previous</span>
+        </span>
+    </button>
+    <button type="button" class="absolute top-0 end-0 z-20 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-next>
+        <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 group-hover:bg-white/50 group-focus:ring-4 group-focus:ring-white group-focus:outline-none">
+            <svg class="w-4 h-4 text-white rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 9 4-4-4-4"/>
+            </svg>
+            <span class="sr-only">Next</span>
+        </span>
+    </button>
+  </section>
+
+  <section class="container max-w-screen-xl mx-auto my-8 px-4 md:px-12" id="travel-tips">
     <div>
-      <h1 class="text-2xl md:text-4xl font-bold my-4 md:my-12">Travel Tips</h1>
+      <h1 class="amaranth-regular font-bold text-2xl md:text-4xl my-4 mt-20">Travel Tips</h1>
     </div>
     <ul class=" grid md:grid-cols-3 w-fulll gap-4 md:gap-6">
       <li class="bg-white border border-gray-200 shadow dark:bg-mixed200 p-4 rounded">
         <div class="mx-auto flex items-center gap-2">
           <span
             class="grid text-white bg-gradient-to-r from-secondary to-primary font-extrabold w-10 h-10 text-center items-center rounded-full">1</span>
-          <h3 class="font-semibold">Search for a Destination</h3>
+          <h3 class="font-semibold">Explore Diverse Landscapes</h3>
         </div>
         <p class="text-gray-900 dark:text-[#908d96] my-4">
-          Search for your preferred destination for adventure and enjoying the
-          beauty of nature.
+          From the iconic Mount Bromo to the tranquil beaches of Pacitan, East Java boasts a wide array of natural wonders waiting to be explored.
         </p>
-        <div class="md:w-1/3 bg-gradient-to-r from-secondary to-primary p-2 rounded">
-          <a href="#" class="block text-center font-semibold text-white">Learn More</a>
-        </div>
       </li>
       <li class="bg-white border border-gray-200 shadow dark:bg-mixed200 p-4 rounded">
         <div class="mx-auto flex items-center gap-2">
           <span
             class="grid text-white bg-gradient-to-r from-secondary to-primary font-extrabold w-10 h-10 text-center items-center rounded-full">2</span>
-          <h3 class="font-semibold">Learn Culture (Optional)</h3>
+          <h3 class="font-semibold">Immerse in Culture and Tradition</h3>
         </div>
         <p class="text-gray-900 dark:text-[#908d96] my-4">
-          Learn about the rich culture and profound ideology of unity in
-          diversity that thrives in the vibrant tapestry of East Java.
+          Dive into the rich cultural heritage of cities like Surabaya, where traditional markets, historical sites, and vibrant festivals offer a glimpse into Indonesia's past and present.
         </p>
-        <div class="md:w-1/3 bg-gradient-to-r from-secondary to-primary p-2 rounded">
-          <a href="#" class="block text-center font-semibold text-white">Learn More</a>
-        </div>
       </li>
       <li class="bg-white border border-gray-200 shadow dark:bg-mixed200 p-4 rounded">
         <div class="mx-auto flex items-center gap-2">
           <span
             class="grid text-white bg-gradient-to-r from-secondary to-primary font-extrabold w-10 h-10 text-center items-center rounded-full">3</span>
-          <h3 class="font-semibold">Choose a Tour Package</h3>
+          <h3 class="font-semibold">Indulge in Culinary Delights</h3>
         </div>
         <p class="text-gray-900 dark:text-[#908d96] my-4">
-          Choose your tour package, the package includes plane tickets ,
-          hotels, restaurants, etc. and enjoy your vacation.
+          Treat your taste buds to the flavors of East Java with its mouthwatering cuisine, from savory sate kambing to refreshing es teler, each dish tells a story of the region's culinary heritage.
         </p>
-        <div class="md:w-1/3 bg-gradient-to-r from-secondary to-primary p-2 rounded">
-          <a href="#" class="block text-center font-semibold text-white">Learn More</a>
-        </div>
       </li>
     </ul>
+    <ul id="travel-more" class="hidden grid md:grid-cols-3 w-fulll gap-4 md:gap-6 mt-4 md:mt-6">
+      <li class="bg-white border border-gray-200 shadow dark:bg-mixed200 p-4 rounded">
+        <div class="mx-auto flex items-center gap-2">
+          <span
+            class="grid text-white bg-gradient-to-r from-secondary to-primary font-extrabold w-10 h-10 text-center items-center rounded-full">4</span>
+          <h3 class="font-semibold">Embrace Adventure</h3>
+        </div>
+        <p class="text-gray-900 dark:text-[#908d96] my-4">
+          Embark on thrilling adventures in East Java's lush countryside, whether it's trekking through dense forests, rafting down scenic rivers, or exploring hidden waterfalls, there's no shortage of outdoor activities to enjoy.
+        </p>
+      </li>
+      <li class="bg-white border border-gray-200 shadow dark:bg-mixed200 p-4 rounded">
+        <div class="mx-auto flex items-center gap-2">
+          <span
+            class="grid text-white bg-gradient-to-r from-secondary to-primary font-extrabold w-10 h-10 text-center items-center rounded-full">5</span>
+          <h3 class="font-semibold">Plan Your Trip</h3>
+        </div>
+        <p class="text-gray-900 dark:text-[#908d96] my-4">
+          Before you go, make sure to plan your trip carefully, considering factors like weather, transportation, and accommodation to ensure a smooth and enjoyable journey.
+        </p>
+      </li>
+      <li class="bg-white border border-gray-200 shadow dark:bg-mixed200 p-4 rounded">
+        <div class="mx-auto flex items-center gap-2">
+          <span
+            class="grid text-white bg-gradient-to-r from-secondary to-primary font-extrabold w-10 h-10 text-center items-center rounded-full">6</span>
+          <h3 class="font-semibold">Respect Local Customs</h3>
+        </div>
+        <p class="text-gray-900 dark:text-[#908d96] my-4">
+          While exploring East Java, remember to respect local customs and traditions, from dress codes at religious sites to etiquette in local communities, showing cultural sensitivity enriches your travel experience
+        </p>
+      </li>
+    </ul>
+    <div class="flex items-center justify-center my-2">
+      <button id="show-more-btn" class="font-semibold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent" onclick="showMore()">Show More</button>
+      <svg id="arrow-down" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="text-secondary bi bi-caret-down-fill" viewBox="0 0 16 16">
+        <path d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z"/>
+      </svg>
+      <svg id="arrow-up" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="hidden text-secondary bi bi-caret-up-fill" viewBox="0 0 16 16">
+        <path d="m7.247 4.86-4.796 5.481c-.566.647-.106 1.659.753 1.659h9.592a1 1 0 0 0 .753-1.659l-4.796-5.48a1 1 0 0 0-1.506 0z"/>
+      </svg>
+    </div>
   </section>
 
   <section class="container max-w-screen-xl mx-auto my-8 px-4 md:px-12">
-    <h2 class="text-2xl md:text-4xl font-bold my-12">Popular Destination</h2>
-    <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 text-center md:text-left">
+    <h2 class="amaranth-regular font-bold text-2xl md:text-4xl my-4 mt-20">Destination Highlight</h2>
+    <!-- <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 text-center md:text-left">
       <div class="relative overflow-hidden rounded">
         <img src="/assets/img/bromo.jpg" alt=""
           class="w-full h-full hover:scale-125 transition duration-300 cursor-pointer" />
@@ -299,8 +392,51 @@
           <h3 class="text-sm md:text-md font-semibold text-white">Madakaripura Waterfall</h3>
         </div>
       </div>
+    </div> -->
+   
+    <div class="grid md:grid-cols-3 gap-6 md:gap-4 aspect-widescreen">
+      <div class="relative overflow-hidden rounded">
+        <img src="https://ik.imagekit.io/rnatrnn6r/bromo-min.jpg?updatedAt=1708143929756" alt=""
+          class="w-full h-full hover:scale-125 transition duration-300 cursor-pointer" />
+          <div class="absolute bottom-0 p-4 bg-gradient-to-t from-mixed100 w-full">
+            <h3 class="text-sm md:text-md font-semibold text-white">Mount Bromo</h3>
+          </div>
+      </div>
+      <div class="grid gap-6 md:gap-4">
+        <div class="relative overflow-hidden rounded">
+          <img src="https://ik.imagekit.io/rnatrnn6r/kawah-ijen-min.jpg?updatedAt=1708143929116" alt=""
+            class="w-full h-full hover:scale-125 transition duration-300 cursor-pointer" />
+            <div class="absolute bottom-0 p-4 bg-gradient-to-t from-mixed100 w-full">
+              <h3 class="text-sm md:text-md font-semibold text-white">Ijen Crater</h3>
+            </div>
+        </div>
+        <div class="relative overflow-hidden rounded">
+          <img src="https://ik.imagekit.io/rnatrnn6r/de-djawatan-min.jpg?updatedAt=1708143930330" alt=""
+            class="w-full h-full hover:scale-125 transition duration-300 cursor-pointer" />
+            <div class="absolute bottom-0 p-4 bg-gradient-to-t from-mixed100 w-full">
+              <h3 class="text-sm md:text-md font-semibold text-white">De Djawatan Forest</h3>
+            </div>
+        </div>
+      </div>
+      <div class="relative overflow-hidden rounded">
+        <img src="https://ik.imagekit.io/rnatrnn6r/madakaripura-waterfall-min.jpg?updatedAt=1708143930167" alt=""
+          class="w-full h-full hover:scale-125 transition duration-300 cursor-pointer" />
+          <div class="absolute bottom-0 p-4 bg-gradient-to-t from-mixed100 w-full">
+            <h3 class="text-sm md:text-md font-semibold text-white">Papuma Beach</h3>
+          </div>
+      </div>
+    </div>
+    <div class="mx-auto md:w-1/4 my-6 bg-gradient-to-r from-secondary to-primary p-2 rounded">
+      <a href="/destinations/" class="block text-center font-semibold text-white">Discover More</a>
     </div>
   </section>
+
+
+
+
+  <footer class="container max-w-screen-xl mx-auto my-8 px-4 md:px-12">
+
+  </footer>
 
   <script src="/assets/js/app.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.1/flowbite.min.js"></script>
