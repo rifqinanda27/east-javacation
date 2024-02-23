@@ -5,16 +5,52 @@ async function apiWeather() {
   const data = await res.json();
   const params = data.data.params;
 
-  console.log(params[5].times[0].celcius);
+  const currentTimeFormatted = getCurrentTimeFormatted();
+  const matchingWeather = [];
 
-  weather.innerHTML = "";
-  weather.innerHTML += `
-            <h2 class="text-xl font-bold">${data.data.description}</h2>
-            <div class="flex gap-4">
-              <p class="text-lg">${params[5].times[0].celcius}</p>
-              <p class="text-lg">${params[6].times[0].name}</p>
-            </div>
-        `;
+  params.forEach((param) => {
+    param.times.forEach((item) => {
+      if (parseInt(item.datetime) === parseInt(currentTimeFormatted)) {
+        matchingWeather.push(item);
+      }
+    });
+  });
+
+  const weather = document.getElementById("weather");
+  if (matchingWeather.length > 0) {
+    weather.innerHTML = `
+        <h2 class="text-xl font-bold">${data.data.description}</h2>
+        <div class="flex gap-4">
+            ${matchingWeather
+              .map(
+                (item) => `
+                ${
+                  item.celcius
+                    ? `<p class="text-lg">Suhu: ${item.celcius}</p>`
+                    : ""
+                }
+                ${item.name ? `<p class="text-lg">Cuaca: ${item.name}</p>` : ""}
+            `
+              )
+              .join("")}
+        </div>
+    `;
+  } else {
+    weather.innerHTML = "<p>Cuaca saat ini tidak tersedia.</p>";
+  }
+}
+
+function getCurrentTimeFormatted() {
+  const currentDate = new Date();
+  const year = currentDate.getFullYear();
+  let month = currentDate.getMonth() + 1;
+  month = month < 10 ? "0" + month : month;
+  let day = currentDate.getDate();
+  day = day < 10 ? "0" + day : day;
+  let hours = currentDate.getHours();
+  hours = Math.floor(hours / 6) * 6;
+  hours = hours < 10 ? "0" + hours : hours;
+  return `${year}${month}${day}${hours}00`;
 }
 
 apiWeather();
