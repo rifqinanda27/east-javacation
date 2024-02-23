@@ -1,4 +1,3 @@
-// Ketika scroll kebawah navbar menjadi fixed dan blur
 const nav = document.getElementById("nav");
 const navChild = document.getElementById("navChild");
 
@@ -20,7 +19,6 @@ window.addEventListener("scroll", function () {
   }
 });
 
-// Ketika button di klik mengarah ke konten
 function goToTravelTips() {
   const travelTrips = document.getElementById("travel-tips");
   const navbarHeight = document.getElementById("navChild").offsetHeight;
@@ -34,7 +32,6 @@ function goToTravelTips() {
 var themeToggleDarkIcon = document.getElementById("theme-toggle-dark-icon");
 var themeToggleLightIcon = document.getElementById("theme-toggle-light-icon");
 
-// Change the icons inside the button based on previous settings
 if (
   localStorage.getItem("color-theme") === "dark" ||
   (!("color-theme" in localStorage) &&
@@ -48,11 +45,9 @@ if (
 var themeToggleBtn = document.getElementById("theme-toggle");
 
 themeToggleBtn.addEventListener("click", function () {
-  // toggle icons inside button
   themeToggleDarkIcon.classList.toggle("hidden");
   themeToggleLightIcon.classList.toggle("hidden");
 
-  // if set via local storage previously
   if (localStorage.getItem("color-theme")) {
     if (localStorage.getItem("color-theme") === "light") {
       document.documentElement.classList.add("dark");
@@ -63,8 +58,6 @@ themeToggleBtn.addEventListener("click", function () {
       localStorage.setItem("color-theme", "light");
       console.log("light");
     }
-
-    // if NOT set via local storage previously
   } else {
     if (document.documentElement.classList.contains("dark")) {
       document.documentElement.classList.remove("dark");
@@ -76,23 +69,17 @@ themeToggleBtn.addEventListener("click", function () {
   }
 });
 
-// Mendaftarkan event listener untuk peristiwa resize window
 window.addEventListener("resize", function () {
-  // Membaca lebar layar saat ini
   var screenWidth = window.innerWidth;
 
-  // Mendapatkan elemen video
   var video = document.getElementById("video");
 
-  // Mendapatkan sumber video yang tersedia
   var source768 = document.querySelector('source[data-width="768"]');
   var sourceDefault = document.querySelector("source[data-default]");
 
-  // Jika lebar layar kurang dari atau sama dengan 767px, ganti sumber video menjadi 768px
   if (screenWidth <= 767) {
     video.src = source768.getAttribute("src");
   } else {
-    // Jika lebar layar lebih besar dari 767px, kembalikan ke sumber video default
     video.src = sourceDefault.getAttribute("src");
   }
 });

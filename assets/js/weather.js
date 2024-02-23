@@ -11,10 +11,7 @@ async function apiWeather() {
 
   params.forEach((param) => {
     param.times.forEach((item) => {
-      if (
-        parseInt(item.datetime) === parseInt(currentTimeFormatted) &&
-        parseInt(item.h) === parseInt(currentHour)
-      ) {
+      if (parseInt(item.datetime) === parseInt(currentTimeFormatted)) {
         matchingWeather.push(item);
       }
     });
@@ -64,7 +61,7 @@ function getCurrentHour() {
   const currentDate = new Date();
   let hours = currentDate.getHours();
   hours = Math.floor(hours / 6) * 6;
-  hours = hours < 10 ? "0" + hours : hours;
+  hours = hours == 0 ? "0" + hours : hours;
   return hours;
 }
 
