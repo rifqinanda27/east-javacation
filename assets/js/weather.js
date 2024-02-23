@@ -6,17 +6,22 @@ async function apiWeather() {
   const params = data.data.params;
 
   const currentTimeFormatted = getCurrentTimeFormatted();
+  const currentHour = getCurrentHour();
   const matchingWeather = [];
 
   params.forEach((param) => {
     param.times.forEach((item) => {
-      if (parseInt(item.datetime) === parseInt(currentTimeFormatted)) {
+      if (
+        parseInt(item.datetime) === parseInt(currentTimeFormatted) &&
+        parseInt(item.h) === parseInt(currentHour)
+      ) {
         matchingWeather.push(item);
       }
     });
   });
 
   const weather = document.getElementById("weather");
+  weather.innerHTML = "";
   if (matchingWeather.length > 0) {
     weather.innerHTML = `
         <h2 class="text-xl font-bold">${data.data.description}</h2>
@@ -24,19 +29,21 @@ async function apiWeather() {
             ${matchingWeather
               .map(
                 (item) => `
+                ${item.celcius ? `<p class="text-lg">${item.celcius}</p>` : ""}
                 ${
-                  item.celcius
-                    ? `<p class="text-lg">Suhu: ${item.celcius}</p>`
+                  item.name
+                    ? `<p class="text-lg">${translateWeather(item.name)}</p>`
                     : ""
                 }
-                ${item.name ? `<p class="text-lg">Cuaca: ${item.name}</p>` : ""}
+                
             `
               )
               .join("")}
         </div>
     `;
   } else {
-    weather.innerHTML = "<p>Cuaca saat ini tidak tersedia.</p>";
+    weather.innerHTML =
+      "<p>Weather information is not available at the moment.</p>";
   }
 }
 
@@ -51,6 +58,33 @@ function getCurrentTimeFormatted() {
   hours = Math.floor(hours / 6) * 6;
   hours = hours < 10 ? "0" + hours : hours;
   return `${year}${month}${day}${hours}00`;
+}
+
+function getCurrentHour() {
+  const currentDate = new Date();
+  let hours = currentDate.getHours();
+  hours = Math.floor(hours / 6) * 6;
+  hours = hours < 10 ? "0" + hours : hours;
+  return hours;
+}
+
+function translateWeather(weatherInIndonesian) {
+  const weatherTranslations = {
+    Cerah: "Clear Skies",
+    "Cerah Berawan": "Partly Cloudy",
+    Berawan: "Mostly Cloudy",
+    "Berawan Tebal": "Overcast",
+    "Udara Kabut": "Haze",
+    Asap: "Smoke",
+    Kabut: "Fog",
+    "Hujan Ringan": "Light Rain",
+    "Hujan Sedang": "Rain",
+    "Hujan Lebat": "Heavy Rain",
+    "Hujan Lokal": "Isolated Shower",
+    "Hujan Petir": "Severe Thunderstorm",
+  };
+
+  return weatherTranslations[weatherInIndonesian] || weatherInIndonesian;
 }
 
 apiWeather();

@@ -413,14 +413,21 @@
   </section>
 
   <footer class="container max-w-screen-xl mx-auto px-4 p-4 md:px-12 bg-gray-100 dark:bg-mixed200">
-    <div class="grid grid-cols-2">
+    <div class="grid md:grid-cols-2 gap-4">
       <div>
         <a href="/" class="flex items-center space-x-3 rtl:space-x-reverse z-10">
           <span class="self-center text-lg md:text-2xl font-semibold whitespace-nowrap">East Javacation</span>
         </a>
         <p>Discover Nature's Beauty and Cultural Wonders!</p>
       </div>
-      <div id="weather" class="bg-gradient-to-r from-primary to-secondary p-6 rounded"></div>
+      <div class="bg-mixed300/[0.3] p-2 md:p-4 rounded">
+        <div id="weather"></div>
+        <div class="flex gap-2 mt-6">
+          <p>Source : </p>
+          <a href="https://data.bmkg.go.id/prakiraan-cuaca/" target="_blank">BMKG</a>
+          <a href="https://github.com/renomureza/cuaca-gempa-rest-api" target="_blank">Rest API</a> 
+        </div>
+      </div>
     </div>
     <h2 class="mt-6 mb-2">Social Media</h2>
     <div class="flex flex-wrap gap-4 items-center">
@@ -450,7 +457,7 @@
         </svg>
       </a>
     </div>
-    <div class="text-center">
+    <div class="text-center mt-4">
       <p>&copy; 2024 East Javacation</p>
     </div>
   </footer>
