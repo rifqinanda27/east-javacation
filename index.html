@@ -39,52 +39,21 @@
             <li>
               <a href="/" hx-boost="false" class="block py-2 px-3 md:p-0 md:text-white">Home</a>
             </li>
-            <!-- Start Destination -->
-            <!-- <li>
-              <button id="dropdownNavbarLink" data-dropdown-toggle="dropdownDestinations"
-                class="flex items-center justify-between w-full py-2 px-3 rounded md:text-white md:border-0 md:p-0 md:w-auto">
-                Destinations
-                <svg class="w-2.5 h-2.5 ms-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
-                  viewBox="0 0 10 6">
-                  <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                    d="m1 1 4 4 4-4" />
-                </svg>
-              </button>
-
-              <div id="dropdownDestinations"
-                class="z-10 hidden font-normal bg-white text-mixed100 dark:text-white dark:bg-mixed200 border divide-y divide-gray-100 rounded-lg shadow w-44">
-                <ul class="py-2" aria-labelledby="dropdownLargeButton">
-                  <li>
-                    <a hx-boost="true" href="/destinations/"
-                      class="block px-4 py-2 hover:bg-gray-200 dark:hover:bg-mixed100/[.5]">Destinations</a>
-                  </li>
-                  <li>
-                    <a hx-boost="true" href="#"
-                      class="block px-4 py-2 hover:bg-gray-200 dark:hover:bg-mixed100/[.5]">Attraction</a>
-                  </li>
-                  <li>
-                    <a hx-boost="true" href="#"
-                      class="block px-4 py-2 hover:bg-gray-200 dark:hover:bg-mixed100/[.5]">Local Foods</a>
-                  </li>
-                </ul>
-              </div>
-            </li> -->
-            <!-- End Destination -->
             
             <li>
-              <a href="http://" hx-boost="true" class="block py-2 px-3 md:p-0 md:text-white">Destinations</a>
+              <a href="/destinations" hx-boost="true" class="block py-2 px-3 md:p-0 md:text-white">Destinations</a>
             </li>
 
             <li>
-              <a href="http://" hx-boost="true" class="block py-2 px-3 md:p-0 md:text-white">Attraction</a>
+              <a href="/attraction" hx-boost="true" class="block py-2 px-3 md:p-0 md:text-white">Attraction</a>
             </li>
 
             <li>
-              <a href="http://" hx-boost="true" class="block py-2 px-3 md:p-0 md:text-white">Local Foods</a>
+              <a href="/local-foods" hx-boost="true" class="block py-2 px-3 md:p-0 md:text-white">Local Foods</a>
             </li>
 
             <li>
-              <a href="http://" hx-boost="true" class="block py-2 px-3 md:p-0 md:text-white">Gallery</a>
+              <a href="/gallery" hx-boost="true" class="block py-2 px-3 md:p-0 md:text-white">Gallery</a>
             </li>
             
             <li>
@@ -221,8 +190,8 @@
         <div class="hidden duration-700 ease-in-out" data-carousel-item>
           <div class="absolute top-6 left-6 md:top-16 md:left-32 z-10 md:w-1/2">
             <h2 class="amaranth-regular font-bold text-4xl md:text-6xl text-shadow mb-6">Probolinggo</h2>
-            <h3 class="amaranth-regular font-bold text-3xl md:text-5xl text-shadow">Warm hospitality and welcoming community.</h3>
-            <p class="text-sm md:text-xl text-shadow">Renowned for its pristine beaches, enchanting waterfalls, countryside, and rich cultural heritage.</p>
+            <h3 class="amaranth-regular font-bold text-3xl md:text-5xl text-shadow">Where Culture Meets the Sea.</h3>
+            <p class="text-sm md:text-xl text-shadow">Dive into the city's history by exploring ancient temples, such as Candi Badut, and immerse yourself in the bustling atmosphere of traditional markets.</p>
             <div class="bg-gradient-to-r from-secondary to-primary p-3 rounded w-1/2 md:w-1/3 mt-6">
               <div class="flex flex-warp items-center">
                 <a href="http://" class="block mx-auto">Explore Probolinggo</a>
@@ -232,11 +201,24 @@
               </div>
             </div>
           </div>
-            <img src="https://ik.imagekit.io/rnatrnn6r/probolinggo.jpg?updatedAt=1708688834572" class="absolute object-cover block w-full h-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
+          <img src="https://ik.imagekit.io/rnatrnn6r/probolinggo.jpg?updatedAt=1708688834572" class="absolute object-cover block w-full h-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
         </div>
         <!-- Item 5 -->
         <div class="hidden duration-700 ease-in-out" data-carousel-item>
-            <img src="" class="absolute block w-full h-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
+          <div class="absolute top-6 left-6 md:top-16 md:left-32 z-10 md:w-1/2">
+            <h2 class="amaranth-regular font-bold text-4xl md:text-6xl text-shadow mb-6">Kediri</h2>
+            <h3 class="amaranth-regular font-bold text-3xl md:text-5xl text-shadow">Where Past Meets Present.</h3>
+            <p class="text-sm md:text-xl text-shadow">Nestled in the heart of East Java, Kediri is a dynamic city renowned for its fascinating blend of ancient wonders and modern delights</p>
+            <div class="bg-gradient-to-r from-secondary to-primary p-3 rounded w-1/2 md:w-1/3 mt-6">
+              <div class="flex flex-warp items-center">
+                <a href="http://" class="block mx-auto">Explore Kediri</a>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="block mx-auto bi bi-arrow-right" viewBox="0 0 16 16">
+                  <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"/>
+                </svg>
+              </div>
+            </div>
+          </div>
+            <img src="https://ik.imagekit.io/rnatrnn6r/kediri.jpg?updatedAt=1708734795093" class="absolute block w-full h-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
         </div>
     </div>
     
@@ -417,7 +399,7 @@
     </div>
   </section>
 
-  <footer class="container max-w-screen-xl mx-auto px-4 p-4 md:px-12 bg-gray-100 dark:bg-mixed200">
+  <footer class="mx-auto p-4 bg-gray-100 dark:bg-mixed200">
     <div class="grid md:grid-cols-2 gap-4">
       <div>
         <a href="/" class="flex items-center space-x-3 rtl:space-x-reverse z-10">
@@ -425,7 +407,7 @@
         </a>
         <p>Discover Nature's Beauty and Cultural Wonders!</p>
       </div>
-      <div class="bg-gray-200/[0.3] dark:bg-mixed300/[0.3] p-2 md:p-4 rounded">
+      <div class="bg-gray-300/[0.3] dark:bg-mixed300/[0.3] p-2 md:p-4 rounded">
         <div id="weather"></div>
         <div class="flex gap-2 mt-6">
           <p>Source : </p>

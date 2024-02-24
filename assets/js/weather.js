@@ -11,14 +11,19 @@ async function apiWeather() {
 
   params.forEach((param) => {
     param.times.forEach((item) => {
-      if (parseInt(item.datetime) === parseInt(currentTimeFormatted)) {
+      if (
+        parseInt(item.datetime) === parseInt(currentTimeFormatted) &&
+        parseInt(item.h) === parseInt(currentHour)
+      ) {
         matchingWeather.push(item);
       }
     });
   });
 
   const weather = document.getElementById("weather");
-  weather.innerHTML = "";
+
+  weather.innerHTML = " ";
+
   if (matchingWeather.length > 0) {
     weather.innerHTML = `
         <h2 class="text-xl font-bold">${data.data.description}</h2>
@@ -32,11 +37,11 @@ async function apiWeather() {
                     ? `<p class="text-lg">${translateWeather(item.name)}</p>`
                     : ""
                 }
-                
-            `
+                `
               )
               .join("")}
-        </div>
+          </div>
+          <p>The weather is updated every 6 hours.</p>
     `;
   } else {
     weather.innerHTML =
@@ -59,10 +64,13 @@ function getCurrentTimeFormatted() {
 
 function getCurrentHour() {
   const currentDate = new Date();
-  let hours = currentDate.getHours();
-  hours = Math.floor(hours / 6) * 6;
-  hours = hours == 0 ? "0" + hours : hours;
-  return hours;
+  const hours = (Math.floor(currentDate.getHours() / 6) * 6) % 66;
+
+  if (hours >= 24) {
+    hours = (hours + 6) % 66;
+  }
+
+  return hours < 10 ? "0" + hours : hours;
 }
 
 function translateWeather(weatherInIndonesian) {
