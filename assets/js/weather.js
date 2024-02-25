@@ -11,11 +11,11 @@ async function apiWeather() {
 
   params.forEach((param) => {
     param.times.forEach((item) => {
-      if (
-        parseInt(item.datetime) === parseInt(currentTimeFormatted) &&
-        parseInt(item.h) === parseInt(currentHour)
-      ) {
-        matchingWeather.push(item);
+      console.log(item.datetime, item.h, currentHour);
+      if (parseInt(item.datetime) === parseInt(currentTimeFormatted)) {
+        if (parseInt(item.h) === parseInt(currentHour)) {
+          matchingWeather.push(item);
+        }
       }
     });
   });
@@ -64,9 +64,13 @@ function getCurrentTimeFormatted() {
 
 function getCurrentHour() {
   const currentDate = new Date();
-  const hours = (Math.floor(currentDate.getHours() / 6) * 6) % 66;
+  let hours = (Math.floor(currentDate.getHours() / 6) * 6) % 66;
 
-  if (hours >= 24) {
+  if (hours === 00) {
+    hours = 24;
+  }
+
+  if (hours > 24) {
     hours = (hours + 6) % 66;
   }
 
