@@ -7,3 +7,9 @@
 .poppins-regular {
     font-family: "Poppins", sans-serif;
 }
+
+.image-hero {
+    object-fit: cover;
+    height: 700px;
+    width: 100%;
+}
