@@ -27,17 +27,12 @@ async function apiWeather() {
 
   params.forEach((param) => {
     param.times.forEach((item) => {
-      if (currentHour == 6) {
+      if (currentHour == 00 || currentHour == 06) {
         if (parseInt(item.datetime) === parseInt(currentTimeFormatted)) {
           matchingWeather.push(item);
         }
       }
-      if (
-        currentHour == 24 ||
-        currentHour == 00 ||
-        currentHour == 12 ||
-        currentHour == 18
-      ) {
+      if (currentHour == 12 || currentHour == 18) {
         if (parseInt(item.datetime) === parseInt(currentTimeFormatted)) {
           if (parseInt(item.h) === parseInt(currentHour)) {
             matchingWeather.push(item);
@@ -91,12 +86,7 @@ function getCurrentTimeFormatted() {
 
 function getCurrentHour() {
   const currentDate = new Date();
-  let hours = (Math.floor(currentDate.getHours() / 6) * 6) % 66;
-
-  // Mengatasi nilai 0 yang harusnya menjadi 66
-  if (hours === 0) {
-    hours = 66;
-  }
+  let hours = Math.floor(currentDate.getHours() / 6) * 6;
 
   return hours < 10 ? "0" + hours : hours;
 }
