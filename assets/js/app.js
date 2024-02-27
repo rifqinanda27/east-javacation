@@ -1,3 +1,4 @@
+// navbar offset
 const nav = document.getElementById("nav");
 const navChild = document.getElementById("navChild");
 
@@ -19,6 +20,7 @@ window.addEventListener("scroll", function () {
   }
 });
 
+// function scroll to content travel tips
 function goToTravelTips() {
   const travelTrips = document.getElementById("travel-tips");
   const navbarHeight = document.getElementById("navChild").offsetHeight;
@@ -29,6 +31,7 @@ function goToTravelTips() {
   });
 }
 
+// function dark & light theme
 var themeToggleDarkIcon = document.getElementById("theme-toggle-dark-icon");
 var themeToggleLightIcon = document.getElementById("theme-toggle-light-icon");
 
@@ -69,6 +72,7 @@ themeToggleBtn.addEventListener("click", function () {
   }
 });
 
+// function change the video while resize
 window.addEventListener("resize", function () {
   var screenWidth = window.innerWidth;
 
@@ -84,6 +88,7 @@ window.addEventListener("resize", function () {
   }
 });
 
+// function read more history of eastjava
 function readMore() {
   var dots = document.getElementById("dots");
   var moreText = document.getElementById("more");
@@ -102,6 +107,7 @@ function readMore() {
   }
 }
 
+// function show more travel tips
 function showMore() {
   var arrowDown = document.getElementById("arrow-down");
   var arrowUp = document.getElementById("arrow-up");

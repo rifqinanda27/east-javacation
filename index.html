@@ -13,9 +13,10 @@
   <!-- Konfigurasi -->
   <script src="/tailwind.config.js"></script>
   <script src="/assets/js/colorTheme.js"></script>
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 </head>
 
-<body class="poppins-regular bg-white text-mixed100 dark:bg-mixed100 dark:text-white duration-300">
+<body class="poppins-regular bg-white text-mixed100 dark:bg-mixed100 dark:text-white duration-300 overflow-x-hidden">
   <header class="container max-w-full mx-auto">
     <nav id="nav" class="w-full z-30">
       <div
@@ -81,11 +82,11 @@
   <!-- Header Background -->
   <div class="bg-background bg-cover bg-center aspect-widescreen relative">
     <video autoplay loop muted id="video" class="object-cover w-full h-full">
-      <source src="https://ik.imagekit.io/rnatrnn6r/0208-2_gibyOJJG_3.mp4?updatedAt=1708039260407" type="video/mp4" media="(max-width: 768px)" data-width="768">
-      <source src="https://ik.imagekit.io/rnatrnn6r/0208(2).mp4?updatedAt=1707351595776" type="video/mp4" media="(min-width: 768px)" data-default/>
+      <source src="https://ik.imagekit.io/rnatrnn6r/eastjavacation-video-mobile.mp4?updatedAt=1709023264798" type="video/mp4" media="(max-width: 768px)" data-width="768">
+      <source src="https://ik.imagekit.io/rnatrnn6r/eastjavacation-video-lg.mp4?updatedAt=1709023338275" type="video/mp4" media="(min-width: 768px)" data-default/>
     </video>
-    <div>
-      <div class="amaranth-regular font-bold max-w-full w-full absolute items-center top-[30%]">
+    <div >
+      <div data-aos="zoom-in" class="amaranth-regular font-bold max-w-full w-full absolute items-center top-[30%]">
         <div class="text-white mx-auto text-center">
           <h3 class="inline md:block tracking-widest text-lg md:text-3xl lg:text-4xl">
             Adventure in
@@ -112,12 +113,12 @@
 
 
   <section class="container max-w-screen-xl mx-auto my-8 px-4 md:px-12">
-    <h2 class="amaranth-regular font-bold text-2xl md:text-4xl my-4 mt-20">A brief history of East Java</h2>
+    <h2 class="amaranth-regular font-bold text-2xl md:text-4xl my-4 mt-20" data-aos="fade-down">A brief history of East Java</h2>
     <div class="md:flex md:gap-6">
-      <div class="w-full">
+      <div class="w-full" data-aos="fade-right">
         <img loading="lazy" src="https://ik.imagekit.io/rnatrnn6r/Popular%20Destinations%20WDC/Ggrahadi-min.webp?updatedAt=1708960984296" alt="Image" class="rounded">
       </div>
-      <div class="w-full">
+      <div class="w-full" data-aos="fade-left">
         <p>
           East Java, located on the eastern part of Java Island in Indonesia, has a rich and diverse history dating back centuries. The region has been inhabited since prehistoric times, with evidence of early human settlements found in various archaeological sites. <br><br>
           One of the earliest known kingdoms in East Java was the kingdom of Kediri, which flourished from the 11th to the 13th century. It was followed by the Majapahit Empire, one of the largest and most powerful empires in Southeast Asia, which rose to prominence in the 13th century under the rule of King Hayam Wuruk. <br><br>
@@ -133,9 +134,9 @@
     </div>
   </section>
 
-  <section id="indicators-carousel" class="relative w-full mt-24" data-carousel="static">
+  <section id="indicators-carousel" class="relative w-full mt-24 duration-3000" data-carousel="slide">
     <!-- Carousel wrapper -->
-    <div class="relative h-screen md:h-[450px] overflow-hidden text-white">
+    <div class="relative h-screen md:h-[450px] overflow-hidden text-white" data-aos="fade-in">
          <!-- Item 1 -->
         <div class="hidden duration-700 ease-in-out" data-carousel-item="active">
           <div class="absolute top-6 left-6 md:top-16 md:left-32 z-10 md:w-1/2">
@@ -151,7 +152,7 @@
               </div>
             </div>
           </div>
-            <img loading="lazy" src="https://ik.imagekit.io/rnatrnn6r/surabaya-min.jpeg?updatedAt=1708522806906" class="absolute object-cover block w-full h-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
+            <img loading="lazy" src="https://ik.imagekit.io/rnatrnn6r/City/surabaya.webp?updatedAt=1709017665036" class="absolute object-cover block w-full h-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
         </div>
         <!-- Item 2 -->
         <div class="hidden duration-700 ease-in-out" data-carousel-item>
@@ -168,7 +169,7 @@
               </div>
             </div>
           </div>
-            <img loading="lazy" src="https://ik.imagekit.io/rnatrnn6r/malang-min.jpg?updatedAt=1708522806465" class="absolute object-cover block w-full h-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
+            <img loading="lazy" src="https://ik.imagekit.io/rnatrnn6r/City/malang.jpg?updatedAt=1709017757960" class="absolute object-cover block w-full h-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
         </div>
         <!-- Item 3 -->
         <div class="hidden duration-700 ease-in-out" data-carousel-item>
@@ -185,7 +186,7 @@
               </div>
             </div>
           </div>
-            <img loading="lazy" src="https://ik.imagekit.io/rnatrnn6r/pacitan-min.jpg?updatedAt=1708522806371" class="absolute object-cover block w-full h-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
+            <img loading="lazy" src="https://ik.imagekit.io/rnatrnn6r/City/pacitan.webp?updatedAt=1709017827374" class="absolute object-cover block w-full h-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
         </div>
         <!-- Item 4 -->
         <div class="hidden duration-700 ease-in-out" data-carousel-item>
@@ -202,7 +203,7 @@
               </div>
             </div>
           </div>
-          <img loading="lazy" src="https://ik.imagekit.io/rnatrnn6r/probolinggo.jpg?updatedAt=1708688834572" class="absolute object-cover block w-full h-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
+          <img loading="lazy" src="https://ik.imagekit.io/rnatrnn6r/City/probolinggo.webp?updatedAt=1709017921365" class="absolute object-cover block w-full h-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
         </div>
         <!-- Item 5 -->
         <div class="hidden duration-700 ease-in-out" data-carousel-item>
@@ -219,11 +220,11 @@
               </div>
             </div>
           </div>
-            <img loading="lazy" src="https://ik.imagekit.io/rnatrnn6r/kediri.jpg?updatedAt=1708734795093" class="absolute block w-full h-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
+            <img loading="lazy" src="https://ik.imagekit.io/rnatrnn6r/City/kediri.webp?updatedAt=1709017972562" class="absolute block w-full h-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
         </div>
     </div>
     
-    <button type="button" class="absolute top-0 start-0 z-20 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-prev>
+    <button type="button" data-aos="fade-right" class="absolute top-0 start-0 z-20 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-prev>
         <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 group-hover:bg-white/50 group-focus:ring-4 group-focus:ring-white group-focus:outline-none">
             <svg class="w-4 h-4 text-white rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
                 <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 1 1 5l4 4"/>
@@ -231,7 +232,7 @@
             <span class="sr-only">Previous</span>
         </span>
     </button>
-    <button type="button" class="absolute top-0 end-0 z-20 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-next>
+    <button type="button" data-aos="fade-left" class="absolute top-0 end-0 z-20 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-next>
         <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 group-hover:bg-white/50 group-focus:ring-4 group-focus:ring-white group-focus:outline-none">
             <svg class="w-4 h-4 text-white rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
                 <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 9 4-4-4-4"/>
@@ -242,10 +243,8 @@
   </section>
 
   <section class="container max-w-screen-xl mx-auto my-8 px-4 md:px-12" id="travel-tips">
-    <div>
-      <h1 class="amaranth-regular font-bold text-2xl md:text-4xl my-4 mt-20">Travel Tips</h1>
-    </div>
-    <ul class=" grid md:grid-cols-3 w-fulll gap-4 md:gap-6">
+    <h2 class="amaranth-regular font-bold text-2xl md:text-4xl my-4 mt-20" data-aos="fade-down">Travel Tips</h2>
+    <ul class=" grid md:grid-cols-3 w-fulll gap-4 md:gap-6" data-aos="fade-up">
       <li class="bg-white border border-gray-200 shadow dark:bg-mixed200 p-4 rounded">
         <div class="mx-auto flex items-center gap-2">
           <span
@@ -309,7 +308,7 @@
         </p>
       </li>
     </ul>
-    <div class="flex items-center justify-center my-2">
+    <div class="flex items-center justify-center my-2" data-aos="fade-up">
       <button id="show-more-btn" class="font-semibold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent" onclick="showMore()">Show More</button>
       <svg id="arrow-down" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="text-secondary bi bi-caret-down-fill" viewBox="0 0 16 16">
         <path d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z"/>
@@ -321,9 +320,9 @@
   </section>
 
   <section class="container max-w-screen-xl mx-auto my-8 px-4 md:px-12">
-    <h2 class="amaranth-regular font-bold text-2xl md:text-4xl my-4 mt-20">Destination Highlight</h2>
+    <h2 class="amaranth-regular font-bold text-2xl md:text-4xl my-4 mt-20" data-aos="fade-right">Destination Highlight</h2>
     <div class="grid md:grid-cols-3 gap-6 md:gap-4 aspect-widescreen">
-      <div class="relative overflow-hidden rounded">
+      <div class="relative overflow-hidden rounded" data-aos="fade-right">
         <img loading="lazy" src="https://ik.imagekit.io/rnatrnn6r/Popular%20Destinations%20WDC/bromo-optimaze-ezgif.com-jpg-to-webp-converter.webp?updatedAt=1708960985107" alt="Image"
           class="w-full h-full hover:scale-125 transition duration-300 cursor-pointer" />
           <div class="absolute bottom-0 p-4 bg-gradient-to-t from-mixed100 w-full">
@@ -331,14 +330,14 @@
           </div>
       </div>
       <div class="grid gap-6 md:gap-4">
-        <div class="relative overflow-hidden rounded">
+        <div class="relative overflow-hidden rounded" data-aos="fade-down">
           <img loading="lazy" src="https://ik.imagekit.io/rnatrnn6r/Popular%20Destinations%20WDC/kawah-ijen-min-ezgif.com-jpg-to-webp-converter.webp?updatedAt=1708960983660" alt="Image"
             class="w-full h-full hover:scale-125 transition duration-300 cursor-pointer" />
             <div class="absolute bottom-0 p-4 bg-gradient-to-t from-mixed100 w-full">
               <h3 class="text-sm md:text-md font-semibold text-white">Ijen Crater</h3>
             </div>
         </div>
-        <div class="relative overflow-hidden rounded">
+        <div class="relative overflow-hidden rounded" data-aos="fade-up">
           <img loading="lazy" src="https://ik.imagekit.io/rnatrnn6r/Popular%20Destinations%20WDC/de-djawatan-min-ezgif.com-optiwebp.webp?updatedAt=1708960985807" alt="Image"
             class="w-full h-full hover:scale-125 transition duration-300 cursor-pointer" />
             <div class="absolute bottom-0 p-4 bg-gradient-to-t from-mixed100 w-full">
@@ -346,7 +345,7 @@
             </div>
         </div>
       </div>
-      <div class="relative overflow-hidden rounded">
+      <div class="relative overflow-hidden rounded" data-aos="fade-left">
         <img loading="lazy" src="https://ik.imagekit.io/rnatrnn6r/Popular%20Destinations%20WDC/madakaripura-waterfall-min-ezgif.com-optiwebp.webp?updatedAt=1708960985526" alt="Image"
           class="w-full h-full hover:scale-125 transition duration-300 cursor-pointer" />
           <div class="absolute bottom-0 p-4 bg-gradient-to-t from-mixed100 w-full">
@@ -356,14 +355,14 @@
     </div>
     <div class="grid md:grid-cols-3 gap-6 md:gap-4 aspect-widescreen mt-4">
       <div class="grid gap-6 md:gap-4">
-        <div class="relative overflow-hidden rounded">
+        <div class="relative overflow-hidden rounded" data-aos="fade-right">
           <img loading="lazy" src="https://ik.imagekit.io/rnatrnn6r/Popular%20Destinations%20WDC/wedi-klopo-beach-min-ezgif.com-jpg-to-webp-converter.webp?updatedAt=1708960984535" alt="Image"
             class="w-full h-full hover:scale-125 transition duration-300 cursor-pointer" />
             <div class="absolute bottom-0 p-4 bg-gradient-to-t from-mixed100 w-full">
               <h3 class="text-sm md:text-md font-semibold text-white">Wedi Klopo Beach</h3>
             </div>
         </div>
-        <div class="relative overflow-hidden rounded">
+        <div class="relative overflow-hidden rounded" data-aos="fade-right">
           <img loading="lazy" src="https://ik.imagekit.io/rnatrnn6r/Popular%20Destinations%20WDC/gunung-kelud-min-ezgif.com-optiwebp.webp?updatedAt=1708960983047" alt="Image"
             class="w-full h-full hover:scale-125 transition duration-300 cursor-pointer" />
             <div class="absolute bottom-0 p-4 bg-gradient-to-t from-mixed100 w-full">
@@ -371,7 +370,7 @@
             </div>
         </div>
       </div>
-      <div class="relative overflow-hidden rounded">  
+      <div class="relative overflow-hidden rounded" data-aos="fade-up">  
           <img loading="lazy" src="https://ik.imagekit.io/rnatrnn6r/Popular%20Destinations%20WDC/Tumpak_sewu-min-ezgif.com-optiwebp.webp?updatedAt=1708960984277" alt="Image"
             class="w-full h-full hover:scale-125 transition duration-300 cursor-pointer" />
             <div class="absolute bottom-0 p-4 bg-gradient-to-t from-mixed100 w-full">
@@ -379,14 +378,14 @@
             </div>
       </div>
       <div class="grid gap-6 md:gap-4">
-        <div class="relative overflow-hidden rounded">
+        <div class="relative overflow-hidden rounded" data-aos="fade-left">
           <img loading="lazy" src="https://ik.imagekit.io/rnatrnn6r/Popular%20Destinations%20WDC/pantai-papuma-min-ezgif.com-jpg-to-webp-converter.webp?updatedAt=1708960985371" alt="Image"
             class="w-full h-full hover:scale-125 transition duration-300 cursor-pointer" />
             <div class="absolute bottom-0 p-4 bg-gradient-to-t from-mixed100 w-full">
               <h3 class="text-sm md:text-md font-semibold text-white">Papuma Beach</h3>
             </div>
         </div>
-        <div class="relative overflow-hidden rounded">
+        <div class="relative overflow-hidden rounded" data-aos="fade-left">
           <img loading="lazy" src="https://ik.imagekit.io/rnatrnn6r/Popular%20Destinations%20WDC/kawah-bondowoso-min.webp?updatedAt=1708960985131" alt="Image"
           class="w-full h-full hover:scale-125 transition duration-300 cursor-pointer" />
           <div class="absolute bottom-0 p-4 bg-gradient-to-t from-mixed100 w-full">
@@ -395,7 +394,7 @@
         </div>
       </div>
     </div>
-    <div class="mx-auto md:w-1/4 my-6 bg-gradient-to-r from-secondary to-primary p-2 rounded">
+    <div class="mx-auto md:w-1/4 my-6 bg-gradient-to-r from-secondary to-primary p-2 rounded" data-aos="zoom-in">
       <a href="/destinations/" class="block text-center font-semibold text-white">Discover More</a>
     </div>
   </section>
@@ -409,8 +408,8 @@
         <p>Discover Nature's Beauty and Cultural Wonders!</p>
       </div>
       <div class="bg-gray-300/[0.3] dark:bg-mixed300/[0.3] p-2 md:p-4 rounded">
-        <div id="weather"></div>
-        <div class="flex gap-2 mt-6">
+        <div id="weather" class="p-2"></div>
+        <div class="flex gap-2 mt-6 p-2">
           <p>Source : </p>
           <a href="https://data.bmkg.go.id/prakiraan-cuaca/" target="_blank">BMKG</a>
           <a href="https://github.com/renomureza/cuaca-gempa-rest-api" target="_blank">Rest API</a> 
@@ -450,6 +449,10 @@
     </div>
   </footer>
 
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
   <script src="/assets/js/app.js"></script>
   <script src="/assets/js/weather.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.1/flowbite.min.js"></script>
