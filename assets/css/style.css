@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Amaranth:ital,wght@0,400;0,700;1,400;1,700&family=Lilita+One&family=Poppins&family=Protest+Strike&family=Rowdies:wght@300;400;700&display=swap');
 
 * {
     scroll-behavior: smooth;
@@ -12,4 +12,24 @@
     object-fit: cover;
     height: 700px;
     width: 100%;
+}
+
+.protest-strike {
+    font-family: "Protest Strike", sans-serif;
+}
+
+.lilita-one {
+    font-family: "Lilita One", cursive;
+}
+
+.rowdyes-regular {
+    font-family: "Rowdies", sans-serif;
+}
+
+.amaranth-regular {
+    font-family: "Amaranth", sans-serif;
+}
+
+.text-shadow {
+    text-shadow: 4px 4px 8px #000;
 }
